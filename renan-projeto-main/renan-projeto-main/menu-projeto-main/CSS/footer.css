@@ -1,0 +1,14 @@
+footer{
+    background-color: white;
+}
+.footer-itens{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 8% 24px 8%;
+    align-items: center;
+}
+.copyright{
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}

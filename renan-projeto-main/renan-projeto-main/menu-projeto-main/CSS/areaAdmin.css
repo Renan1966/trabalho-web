@@ -1,0 +1,364 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+    color: #e6e6e6;
+}
+
+/* USUÁRIO LOGADO */
+.usuario-logado{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.usuario-logado i{
+    font-size: 1.1rem;
+}
+
+.btn-logout{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ÁREA ADMIN */
+.area-admin{
+    padding: 120px 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-admin{
+    background-color: #2f3035;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.container-admin h2{
+    color: #6bb3ff;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 10px;
+}
+
+/* FORMULÁRIO */
+.form-produto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group.full-width{
+    grid-column: span 3;
+}
+
+.form-group label{
+    font-weight: 500;
+    color: #e6e6e6;
+}
+
+.form-group input,
+.form-group textarea{
+    padding: 12px 15px;
+    border: 2px solid #3e7ac4;
+    background-color: #3a3b40;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    outline: none;
+    border-color: #6bb3ff;
+}
+
+.form-group textarea{
+    resize: vertical;
+}
+
+/* BOTÃO CADASTRAR */
+.btn-cadastrar{
+    background-color: #4a90e2;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(74, 144, 226, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover{
+    background-color: #6bb3ff;
+}
+
+/* MENSAGENS */
+.msg-sucesso{
+    background-color: #1f3d1f;
+    border: 1px solid #3ea63e;
+    color: #7aff7a;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.msg-erro{
+    background-color: #3d1f1f;
+    border: 1px solid #a63e3e;
+    color: #ff7a7a;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* TABELA */
+.tabela-produtos{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.tabela-produtos th,
+.tabela-produtos td{
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+
+.tabela-produtos th{
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: 600;
+}
+
+.tabela-produtos tr:hover{
+    background-color: #333;
+}
+
+.tabela-produtos .descricao-cell{
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* BOTÃO EXCLUIR */
+.tabela-produtos .acoes{
+    display: flex;
+    gap: 10px;
+}
+
+.btn-excluir{
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-excluir:hover{
+    background-color: #b52a36;
+}
+
+/* INPUT FILE */
+input[type="file"]{
+    padding: 10px;
+    border: 2px dashed #3e7ac4;
+    background-color: #34353a;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+input[type="file"]:hover{
+    border-color: #6bb3ff;
+}
+
+#preview-imagem img{
+    max-width: 150px;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* IMAGEM NA TABELA */
+.img-produto-tabela{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width{
+        grid-column: span 1;
+    }
+
+    .area-admin{
+        padding: 100px 15px 30px 15px;
+    }
+
+    .container-admin{
+        padding: 20px;
+    }
+
+    .tabela-produtos{
+        font-size: 0.9rem;
+    }
+
+    .tabela-produtos th,
+    .tabela-produtos td{
+        padding: 8px 10px;
+    }
+
+    .tabela-produtos .descricao-cell{
+        max-width: 150px;
+    }
+
+    .usuario-logado{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tabela-produtos{
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* WHATSAPP CONFIG */
+.config-whatsapp{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-whatsapp{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-whatsapp .prefixo{
+    background-color: #4a90e2;
+    border: 2px solid #4a90e2;
+    padding: 12px 15px;
+    border-radius: 8px 0 0 8px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.input-whatsapp input{
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #3e7ac4;
+    border-left: none;
+    background-color: #3a3b40;
+    color: #fff;
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-whatsapp input:focus{
+    outline: none;
+    border-color: #6bb3ff;
+}
+
+.btn-salvar-whatsapp{
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-salvar-whatsapp:hover{
+    background-color: #128C7E;
+}
+
+.config-whatsapp .hint{
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+.config-whatsapp h2 i{
+    color: #25D366;
+    margin-right: 8px;
+}
+
+/* RESPONSIVO WHATSAPP */
+@media screen and (max-width: 768px) {
+    .input-whatsapp{
+        flex-wrap: wrap;
+    }
+
+    .input-whatsapp .prefixo{
+        border-radius: 8px 0 0 8px;
+    }
+
+    .input-whatsapp input{
+        border-radius: 0 8px 8px 0;
+        border-left: none;
+        max-width: none;
+    }
+
+    .btn-salvar-whatsapp{
+        width: 100%;
+        border-radius: 8px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

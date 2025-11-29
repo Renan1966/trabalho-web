@@ -1,0 +1,174 @@
+/* Estilos Gerais do Rodapé */
+.site-footer {
+    background-color: #1a1a1a; /* Fundo escuro chique */
+    color: #f0f0f0; /* Texto claro */
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif; /* Use a fonte principal do seu site */
+    border-top: 1px solid #333; /* Linha sutil no topo */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar em linhas em telas menores */
+    justify-content: space-between;
+    max-width: 1200px; /* Limita a largura para melhor leitura */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    gap: 30px; /* Espaçamento entre as seções */
+}
+
+.footer-section {
+    flex: 1; /* Distribui o espaço igualmente */
+    min-width: 200px; /* Garante que as seções não fiquem muito pequenas */
+    margin-bottom: 20px; /* Espaçamento inferior para responsividade */
+}
+
+.footer-section h3 {
+    color: #ffffff; /* Títulos em branco puro */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sob o título */
+    padding-bottom: 10px;
+}
+
+/* Logo e Slogan */
+.footer-logo img {
+    max-width: 150px; /* Tamanho do logo */
+    margin-bottom: 10px;
+}
+
+.footer-slogan {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.brand-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+/* Links de Navegação */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff; /* Ou a cor de destaque da sua marca */
+}
+
+/* Ícones Sociais */
+.social-icons {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Cor de destaque */
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 4px 0 0 4px;
+    background-color: #333;
+    color: #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.newsletter-form input::placeholder {
+    color: #bbb;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background-color: #007bff; /* Cor de destaque */
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Parte Inferior do Rodapé */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #aaa;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-icons i {
+    font-size: 1.8rem;
+    margin: 0 5px;
+    color: #f0f0f0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-section h3 {
+        text-align: center;
+    }
+    .footer-logo {
+        margin: 0 auto 15px auto;
+    }
+    .social-icons {
+        justify-content: center;
+        display: flex;
+    }
+    .newsletter-form {
+        width: 80%;
+        margin: 15px auto 0 auto;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

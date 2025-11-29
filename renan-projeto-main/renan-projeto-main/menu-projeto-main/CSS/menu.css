@@ -1,0 +1,111 @@
+header{
+    /* Mantido: Garantia de topo e largura total */
+    display: flex;
+    height: 90px;
+    background-color: rgb(4, 4, 4);
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    z-index: 1000; 
+}
+#navbar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+}
+i{
+    color: rgb(29, 100, 224);     
+    justify-content: flex-start;
+}
+#nav_list{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    list-style: none;
+}
+.nav-item{
+    padding: 10px;
+}
+.nav-link{
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: rgb(46, 114, 223);
+}
+
+.mobile-menu, .mobile-btn{
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list, #navbar{
+        display: none;
+    }
+    .mobile-btn{
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        
+        /* Cor branca mantida */
+        color: aliceblue; 
+        z-index: 1001; 
+    }
+    .mobile-menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        position: absolute; 
+        top: 90px;
+        z-index: 1010; 
+        
+        /* CORREÇÃO: Diminui o tamanho e alinha à esquerda (Left) */
+        max-width: 150px; /* Diminuído um pouco mais para 250px */
+        width: 70%; /* Ocupa 70% da tela, até o max-width */
+        left: 0; /* Alinha o menu à esquerda (como na imagem original) */
+        right: unset; /* Remove o alinhamento direito anterior */
+    }
+    .mobile-nav-list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        /* Mudar a margem para 0 para não ter offset desnecessário */
+        margin: 0; 
+        padding: 15px 0;
+        background-color: #464646 ;
+        width: 100%;
+    }
+    .mobile-nav-list, .nav-item{
+        list-style: none;
+        text-align: center;
+    }
+    .nav-item a{
+        color: var(--color-neutra-2);
+        display: block; 
+        padding: 10px 0;
+    }
+    .nav-item:hover{
+        background-color: aliceblue;
+        opacity: 0.3;
+        cursor: pointer;
+    }
+    .nav-item a:hover{
+        color:rgb(55, 144, 226);
+
+    }
+}
+
+.header-logo img.logo-site {
+    height: 70px !important;
+    width: auto !important;
+    max-height: 70px !important;
+    object-fit: contain;
+}

@@ -1,0 +1,149 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #24252a 0%, #464646    100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.container-login{
+    background-color: #464646   ;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.6);
+    width: 90%;
+    max-width: 450px;
+    margin: 150px auto 40px auto;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    color: #e6e6e6;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="email"],
+input[type="password"]{
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgb(84, 130, 183);
+    background: #464646   ;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus{
+    outline: none;
+    border-color: rgb(46, 114, 223);
+}
+
+input[type="submit"]{
+    background-color: rgb(46, 114, 223);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 123, 255, 0.5);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(46, 114, 223);
+}
+
+p{
+    text-align: center;
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+p a{
+    color: #3399ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+p a:hover{
+    text-decoration: underline;
+}
+
+.msg-sucesso{
+    background-color: #1d3d1d;
+    border: 1px solid #2f6e2f;
+    color: #7fff7f;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.msg-erro{
+    background-color: #3d1d1d;
+    border: 1px solid #6e2f2f;
+    color: #ff7f7f;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .container-login{
+        padding: 40px 30px;
+        margin: 120px 15px 20px 15px;
+        max-width: 100%;
+    }
+
+    h2{
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    input[type="email"],
+    input[type="password"]{
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+
+    input[type="submit"]{
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-login{
+        padding: 30px 20px;
+        margin: 100px 10px 15px 10px;
+    }
+
+    h2{
+        font-size: 1.4rem;
+    }
+
+    form{
+        gap: 15px;
+    }
+}
